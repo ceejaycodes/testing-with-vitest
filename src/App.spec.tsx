@@ -54,13 +54,11 @@ describe("App", () => {
     fireEvent.click(button)
     
 
-    screen.debug()
 
 
     const wish = document.querySelector(
       'p'
     ) as HTMLElement
-    // screen.getByRole(" ")
 
     expect(input).not.toBeNull()
     expect(button).not.toBeNull()
