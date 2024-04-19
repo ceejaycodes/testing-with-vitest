@@ -24,6 +24,7 @@ function App() {
     <article>
       <h1>Your wish is</h1>
       <p>{wish}</p>
+      <p>cash</p>
     </article>
   );
 }

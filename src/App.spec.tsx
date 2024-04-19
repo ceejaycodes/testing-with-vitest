@@ -6,8 +6,8 @@ import App from './App';
 describe("App", () => {
   it("should allow the user to enter their wish", async () => {
     render(<App />);
-    expect(screen.findByPlaceholderText("enter your wish")).toBeTruthy()
-    expect((await screen.findByPlaceholderText("enter your wish")).textContent).toBe("")
+    expect(screen.findByLabelText("wish input")).toBeTruthy()
+    expect((await screen.findByLabelText("wish input")).textContent).toBe("")
     
   });
 
@@ -36,13 +36,9 @@ describe("App", () => {
   it("should replace the wish entry area with the wish after submission", async () => {    
     render(<App />);
 
-    const input = document.querySelector(
-      'input'
-    ) as HTMLInputElement
+    const input = await screen.findByLabelText("wish input")
 
-    const button = document.querySelector(
-      'button'
-    ) as HTMLButtonElement
+    const button = await screen.findByRole("button")
 
   
 
